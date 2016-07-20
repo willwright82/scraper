@@ -49,5 +49,5 @@ classes_array = []
   classes_array << class_array
 end
 
-#Pry.start(binding)
 puts classes_array
+Pry.start(binding)
