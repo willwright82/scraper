@@ -7,9 +7,9 @@ require 'csv'
 # Request the page to scrape
 #puts 'URL to scrape:'
 #url = gets.chomp.to_s
+url = 'https://www.class4kids.co.uk/sport/swimming/122346/free-baby-and-toddler-taster-day'
 
-#page = HTTParty.get(url)
-page = HTTParty.get('https://www.class4kids.co.uk/sport/swimming/122346/free-baby-and-toddler-taster-day')
+page = HTTParty.get(url)
 
 # Transform HTTP response into a nokogiri object
 parse_page = Nokogiri::HTML(page)
@@ -49,5 +49,7 @@ classes_array = []
   classes_array << class_array
 end
 
+puts url
 puts classes_array
+puts '*********'
 Pry.start(binding)
